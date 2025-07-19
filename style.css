@@ -749,6 +749,7 @@ html {
     #about figure img {
         justify-self: center;
         max-width: 200px;
+    ;
         height: 200px;
     }
 
