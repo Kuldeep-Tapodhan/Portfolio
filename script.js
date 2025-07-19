@@ -103,3 +103,39 @@ function downloadResume() {
     link.click();
     document.body.removeChild(link);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const skillCategories = document.querySelectorAll('#skills > div');
+    const modal = document.getElementById('skill-modal');
+    const modalTitle = document.getElementById('modal-skill-title');
+    const modalList = document.getElementById('modal-skill-list');
+    const closeButton = document.querySelector('.close-button');
+
+    function openModal(category) {
+        const title = category.querySelector('h3').innerText;
+        const skillsHTML = category.querySelector('ul').innerHTML;
+
+        modalTitle.innerText = title;
+        modalList.innerHTML = skillsHTML;
+
+        modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    skillCategories.forEach(category => {
+        category.addEventListener('click', () => {
+            openModal(category);
+        });
+    });
+
+    closeButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+});
