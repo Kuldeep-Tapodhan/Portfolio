@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuldeep Tapodhan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="leftheader">
+            <img src="https://static.vecteezy.com/system/resources/previews/004/753/030/original/portfolio-icon-shadowed-detailed-portfolio-logo-free-vector.jpg" alt="Logo" class="logo">
+            <p>Kuldeep Tapodhan</p>
+        </div>
+        
+        <div class="header-right">
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+            
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <svg class="sun-icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" style="display: none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li onclick="navigateToSection('#about')">About</li>
+                <li onclick="navigateToSection('#skills')">Skills</li>
+                <li onclick="navigateToSection('#experience')">Experience</li>
+                <li onclick="navigateToSection('#education')">Education</li>
+                <li onclick="navigateToSection('#projects')">Projects</li>
+                <li onclick="navigateToSection('#contact')">Contact</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+              <h2>About Me</h2>
+            <figure>
+                <img src="" alt="">
+                
+                <figcaption>
+                    <h1>Kuldeep Tapodhan</h1>
+                    <p>Web Developer | AI/ML Enthusiast</p>
+                     <p>Welcome to my portfolio! I am Kuldeep Tapodhan, a passionate web developer with a keen interest in creating dynamic and responsive web applications.</p>
+                   <button onclick="downloadResume()">Resume</button>
+                </figcaption>
+            </figure>
+          
+           
+        </section>
+
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2 style="width: 100%; text-align: center; margin-bottom: 20px;">Experience</h2>
+            
+            <div class="jobs">
+                <figure>
+                    <img src="https://thekredible-prod.s3.ap-south-1.amazonaws.com/U74120MH2015PTC265316/U74120MH2015PTC265316_logo.jpg" alt="company logo" class="company-logo">
+                    <figcaption>AI/ML Intern at Karoza Tech</figcaption>
+                </figure>
+                <p>June 2025 - Present</p>
+                <p>Worked on various projects that have helped me hone my skills in AI/ML.</p>
+            </div>
+            
+            <div class="jobs">
+                <figure>
+                    <img src="https://thekredible-prod.s3.ap-south-1.amazonaws.com/U74120MH2015PTC265316/U74120MH2015PTC265316_logo.jpg" alt="company logo" class="company-logo">
+                    <figcaption>Web Developer Intern</figcaption>
+                </figure>
+                <p>Jan 2025 - May 2025</p>
+                <p>Developed responsive websites and learned modern web technologies.</p>
+            </div>
+            <div class="jobs">
+                <figure>
+                    <img src="https://thekredible-prod.s3.ap-south-1.amazonaws.com/U74120MH2015PTC265316/U74120MH2015PTC265316_logo.jpg" alt="company logo" class="company-logo">
+                    <figcaption>Web Developer Intern</figcaption>
+                </figure>
+                <p>Jan 2025 - May 2025</p>
+                <p>Developed responsive websites and learned modern web technologies.</p>
+            </div>
+            <div class="jobs">
+                <figure>
+                    <img src="https://thekredible-prod.s3.ap-south-1.amazonaws.com/U74120MH2015PTC265316/U74120MH2015PTC265316_logo.jpg" alt="company logo" class="company-logo">
+                    <figcaption>Web Developer Intern</figcaption>
+                </figure>
+                <p>Jan 2025 - May 2025</p>
+                <p>Developed responsive websites and learned modern web technologies.</p>
+            </div>
+            <div class="jobs">
+                <figure>
+                    <img src="https://thekredible-prod.s3.ap-south-1.amazonaws.com/U74120MH2015PTC265316/U74120MH2015PTC265316_logo.jpg" alt="company logo" class="company-logo">
+                    <figcaption>Web Developer Intern</figcaption>
+                </figure>
+                <p>Jan 2025 - May 2025</p>
+                <p>Developed responsive websites and learned modern web technologies.</p>
+            </div>
+            
+            <div class="jobs">
+                <figure>
+                    <img src="https://thekredible-prod.s3.ap-south-1.amazonaws.com/U74120MH2015PTC265316/U74120MH2015PTC265316_logo.jpg" alt="company logo" class="company-logo">
+                    <figcaption>Frontend Developer</figcaption>
+                </figure>
+                <p>Sep 2024 - Dec 2024</p>
+                <p>Created user interfaces using React and modern CSS frameworks.</p>
+            </div>
+        </section>
+
+        <section id="certifications" class="certifications">
+            <h2 style="width: 100%; text-align: center; margin-bottom: 20px;">Certifications</h2>
+            
+            <div class="cert-item">
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript logo">
+                    <figcaption>JavaScript Advanced Certification</figcaption>
+                </figure>
+            </div>
+            
+            <div class="cert-item">
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="Node.js logo">
+                    <figcaption>Node.js Backend Development</figcaption>
+                </figure>
+            </div>
+            
+            <div class="cert-item">
+                <figure>
+                    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python logo">
+                    <figcaption>Python for AI/ML</figcaption>
+                </figure>
+            </div>
+            
+            <div class="cert-item">
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="HTML5 logo">
+                    <figcaption>Web Development Fundamentals</figcaption>
+                </figure>
+            </div>
+            
+            <div class="cert-item">
+                <figure>
+                    <img src="https://logos-world.net/wp-content/uploads/2022/07/AWS-Logo.png" alt="AWS logo">
+                    <figcaption>AWS Cloud Practitioner</figcaption>
+                </figure>
+            </div>
+            <div class="cert-item">
+                <figure>
+                    <img src="https://logos-world.net/wp-content/uploads/2022/07/AWS-Logo.png" alt="AWS logo">
+                    <figcaption>AWS Cloud Practitioner</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>I hold a degree in Computer Science from XYZ University.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Check out some of my projects on GitHub!</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: kuldeep@example.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kuldeep Tapodhan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Mobile menu toggle functionality
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Navigate to section and close mobile menu
+        function navigateToSection(sectionId) {
+            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+            
+            // Close mobile menu after navigation
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const navbar = document.querySelector('.navbar');
+            
+            if (!navbar.contains(event.target) && mobileMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Load saved theme and initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+
+            // Add fade-in animation to elements
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Add click handlers to desktop nav links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (window.innerWidth > 768) {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Add this to your existing JavaScript
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'path/to/your/resume.pdf'; // Replace with your actual resume file path
+    link.download = 'Kuldeep_Tapodhan_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+    </script>
+</body>
+</html>
