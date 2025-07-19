@@ -97,3 +97,6 @@ function downloadResume() {
     link.click();
     document.body.removeChild(link);
 }
+function viewResume() {
+    window.open('Assest/pdf/Resume.pdf', '_blank');
+}
