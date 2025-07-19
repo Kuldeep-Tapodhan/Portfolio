@@ -41,7 +41,7 @@ body {
 
 /* Header Styles */
 header {
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -422,7 +422,9 @@ section h2 {
     font-size: 1.8rem;
     font-weight: 700;
     position: relative;
+    
     padding-bottom: 0.5rem;
+    width: 100%; text-align: left; margin-bottom: 20px;
 }
 
 section h2::after {
@@ -574,15 +576,18 @@ html {
 
 /* About Section Styles */
 #about {
-    margin: 2rem auto;
+   margin: 2rem auto;
+   
     max-width: 1200px;
-background: var(--bg-color);
+    background: var(--bg-color);
     border-radius: 1rem;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
 }
+
+
 
 #about::before {
     content: '';
@@ -705,7 +710,7 @@ background: var(--bg-color);
 }
 
 /* About Me Heading */
-#about h2 {
+/* #about h2 {
     margin-bottom: 2rem;
     color: var(--text-primary);
     font-size: 2.2rem;
@@ -713,9 +718,9 @@ background: var(--bg-color);
     position: relative;
     padding-bottom: 0.5rem;
     text-align: center;
-}
+} */
 
-#about h2::after {
+/* #about h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -725,7 +730,7 @@ background: var(--bg-color);
     height: 3px;
     background: var(--gradient);
     border-radius: 2px;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
