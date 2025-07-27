@@ -301,10 +301,25 @@ header h1 {
 /* A single style for the image within any card */
 .card-image {
     width: 100%;
+    margin: auto au;
     object-fit: cover;
     border-radius: 0.75rem;
     border: 1px solid var(--border-color);
 }
+
+
+#certifications .card-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
 
 /* Image height for different card types */
 #projects .card-image {
@@ -312,12 +327,7 @@ header h1 {
 
 }
 
-#certifications .card-image {
-    width: 360px;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    margin-top: auto;
-}
+
 
 #experience .card-image.company-logo {
     height: 80px; /* Smaller height for logos */
@@ -1418,4 +1428,60 @@ html {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
+}
+
+
+
+.paginated-item {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.paginated-item.visible {
+    display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.scroll-controls {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.scroll-controls button {
+    background-color: var(--accent, #3b82f6);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.scroll-controls button:hover {
+    background-color: var(--accent-hover, #2563eb);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-hover, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
+}
+
+.scroll-controls button:disabled {
+    background-color: var(--border-color, #e2e8f0);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }

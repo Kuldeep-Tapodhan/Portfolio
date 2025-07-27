@@ -166,3 +166,66 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    function setupPaginator(containerSelector, itemSelector, leftBtnId, rightBtnId, itemsPerPage) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        const items = container.querySelectorAll(itemSelector);
+        const leftBtn = document.getElementById(leftBtnId);
+        const rightBtn = document.getElementById(rightBtnId);
+        
+        if (items.length <= itemsPerPage) {
+            if(leftBtn) leftBtn.style.display = 'none';
+            if(rightBtn) rightBtn.style.display = 'none';
+            return;
+        }
+
+        let currentPage = 0;
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        function showPage(page) {
+            const startIndex = page * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+
+            items.forEach((item, index) => {
+                item.classList.add('paginated-item');
+                if (index >= startIndex && index < endIndex) {
+                    item.classList.add('visible');
+                } else {
+                    item.classList.remove('visible');
+                }
+            });
+
+            if (leftBtn) leftBtn.disabled = page === 0;
+            if (rightBtn) rightBtn.disabled = page === totalPages - 1;
+        }
+
+        if (leftBtn) {
+            leftBtn.addEventListener("click", () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    showPage(currentPage);
+                }
+            });
+        }
+        
+        if (rightBtn) {
+            rightBtn.addEventListener("click", () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    showPage(currentPage);
+                }
+            });
+        }
+
+        showPage(0);
+    }
+
+    setupPaginator('#skills', '#skills > div', 'skills-scroll-left', 'skills-scroll-right', 2);
+    setupPaginator('.projects-container', '.project-card', 'projects-scroll-left', 'projects-scroll-right', 2);
+    setupPaginator('.card-grid', '.card', 'certs-scroll-left', 'certs-scroll-right', 2);
+});
