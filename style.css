@@ -536,52 +536,6 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: 2.5rem;
 }
-
-.social {
-    margin-bottom: 0.5rem;
-}
-
-.social ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.social a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
-.social a:hover {
-    color: var(--accent);
-    background-color: var(--bg-color);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-}
-
-.social img {
-    width: 20px;
-    height: 20px;
-}
-
-[data-theme="dark"] .social img {
-    filter: invert(1) opacity(0.8);
-}
-
-[data-theme="dark"] .social a:hover img {
-   filter: none;
-}
-
 footer p {
     font-size: 0.9rem;
     color: var(--text-secondary);
@@ -1429,7 +1383,85 @@ html {
         gap: 2.5rem;
     }
 }
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 
+.contact-details li {
+  display: flex;
+  align-items: flex-start; /* Aligns icon with the top line of text */
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-details li img {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px; /* Adjusts icon position vertically */
+  filter: invert(45%) sepia(21%) saturate(2206%) hue-rotate(204deg)
+    brightness(94%) contrast(94%); /* Applies a color similar to the original icons */
+}
+
+.contact-details li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details li a:hover {
+  color: var(--accent);
+}
+
+/* YOUR EXISTING SOCIAL CSS (No changes needed) */
+.social {
+  margin-bottom: 0.5rem;
+}
+
+.social ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* Align icons to the left */
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 0.5rem; /* A smaller gap might look better here */
+}
+
+.social a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem; /* Padding for icon-only links */
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  color: var(--accent);
+  background-color: var(--bg-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Dark mode compatibility */
+[data-theme="dark"] .social img {
+  filter: invert(1) opacity(0.8);
+}
+
+[data-theme="dark"] .social a:hover img {
+  filter: none;
+}
 
 
 .paginated-item {
@@ -1484,4 +1516,10 @@ html {
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
+}
+
+.active-scroll {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1.01); /* Optional: slightly enlarges the container while dragging */
 }
