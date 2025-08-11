@@ -120,7 +120,7 @@ header h1 {
 }
 
 .nav-links li:hover {
-    background-color: var(--accent);
+    /* background-color: var(--accent); */
     color: white;
     transform: translateY(-2px);
 }
